@@ -93,7 +93,6 @@
 @media screen and (max-width: 1014px){
     .header{
         width: 700px;
-        border: 1px solid #000;
     }
    }
 
@@ -111,7 +110,6 @@
     .header{
         width: 550px;
         margin-bottom: 2rem;
-        border: 1px solid #000;
     }
     
     .header button{
