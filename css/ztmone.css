@@ -784,6 +784,14 @@ nav a:hover{
   .sub-discribtion p{
     font-size: small;
   }
+
+  .additiona-fex{
+    display: block;
+  }
+
+  .sub-additional{
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 825px){
