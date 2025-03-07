@@ -776,7 +776,7 @@ nav a:hover{
 
 
 
-@media screen and (max-width: 842px){
+@media screen and (max-width: 1101px){
   .sub-discribtion i{
     font-size: 20px;
   }
@@ -786,47 +786,24 @@ nav a:hover{
   }
 }
 
-@media screen and (max-width: 732px){
-  .additiona-fex{
-    display: block;
-  }
-
-  .sub-additional{
-    margin-bottom: 2rem;
-  }
-}
-
-
-@media screen and (max-width: 658px){
-  .sub-discribtion i{
-    font-size: 25px;
-  }
-
+@media screen and (max-width: 825px){
   .discribtion-main{
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    /* margin-bottom: 2rem; */
 }
 }
 
-@media screen and (max-width: 494px){
-
-  .sub-discribtion {
-    margin-bottom: 2rem;
-  }
-
-  .sub-discribtion p{
-    font-size: medium;
-  }
-
-  .sub-discribtion i{
-    font-size: 30px;
-  }
-
-
+@media screen and (max-width: 577px){
   .discribtion-main{
     display: block;
 }
+
+.sub-discribtion{
+  margin-bottom: 2rem;
 }
+}
+
 
 
 
