@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZTA Maturity Assessment Questionnaire</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/survay.css">
+</head>
+
+
+<body>
+     <!-- Scroll top -->
+     <a href="#hom" class="backto-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <!-- header -->
+  <header>
+    <div class="container">
+     
+     <div class="header">
+     <div class="headerlogo"> <a href="index.html">ZTM</a></div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+         <li><a href="score.html">Scores</a></li>
+         <li class="current"><a href="survay.html">Survay</a></li>
+     </ul>
+    </nav>
+
+    <!-- menu icon -->
+    <div class="menu-icon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+       </div>
+
+ </div>
+    </div>
+ </header>
+
+    <section id="hom" class="Dashboard-head">
+        <div class="container">
+            <div class="text-effect">
+                <span data-content="Z">Z</span><span data-content="e">e</span><span data-content="r">r</span><span data-content="o">o</span>
+                <span data-content="T">T</span><span data-content="r">r</span><span data-content="u">u</span><span data-content="s">s</span><span data-content="t">t</span>
+                <span data-content="M">M</span><span data-content="a">a</span><span data-content="t">t</span><span data-content="u">u</span><span data-content="r">r</span><span data-content="i">i</span><span data-content="t">t</span><span data-content="y">y</span>
+                <span data-content="(ZTM)">(ZTM)</span>
+                <span data-content="A">A</span><span data-content="s">s</span><span data-content="s">s</span><span data-content="e">e</span><span data-content="s">s</span><span data-content="s">s</span><span data-content="m">m</span><span data-content="e">e</span><span data-content="n">n</span><span data-content="t">t</span>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="nav-buttons" id="hom">
+        <div class="container">
+            <div class="header">
+                <button id="btn-identities" onclick="showSection('identities')">IDENTITIES</button>
+                <button id="btn-endpoint" onclick="showSection('endpoint')">ENDPOINT</button>
+                <button id="btn-infrastructure" onclick="showSection('infrastructure')">INFRASTRUCTURE</button>
+                <button id="btn-data" onclick="showSection('data')">DATA</button>
+                <button id="btn-apps" onclick="showSection('apps')">APPS</button>
+                <button id="btn-network" onclick="showSection('network')">NETWORK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Identities Section -->
+    <section>
+        <div class="container">
+            
+            <div id="identities" class="section">
+
+            <h2>Zero Trust Identity Maturity Assessment</h2>
+            <div class="question">
+                <h3>1. How are identity policies enforced?</h3>
+                <input type="text" id="identity_q1" placeholder="Example: Policies are enforced automatically with RBAC." oninput="updateMaturity('identity_q1')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q1"></div></div>
+            </div>
+            <div class="question">
+                <h3>2. How are roles and entitlements managed?</h3>
+                <input type="text" id="identity_q2" placeholder="Example: RBAC ensures minimal privilege with regular reviews." oninput="updateMaturity('identity_q2')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q2"></div></div>
+            </div>
+            <div class="question">
+                <h3>3. How are identities provisioned and de-provisioned?</h3>
+                <input type="text" id="identity_q3" placeholder="Example: Automated provisioning ensures immediate access control." oninput="updateMaturity('identity_q3')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q3"></div></div>
+            </div>
+            <div class="question">
+                <h3>4. What authentication mechanisms are in place for accessing critical resources?</h3>
+                <input type="text" id="identity_q4" placeholder="Example: MFA is required for all critical resources." oninput="updateMaturity('identity_q4')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q4"></div></div>
+            </div>
+            <div class="question">
+                <h3>5. How is Single Sign-On (SSO) implemented across applications?</h3>
+                <input type="text" id="identity_q5" placeholder="Example: SSO is implemented across all critical apps." oninput="updateMaturity('identity_q5')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q5"></div></div>
+            </div>
+            <div class="question">
+                <h3>6. How are identity-related threats detected? (Visibility & Analytics)</h3>
+                <input type="text" id="identity_q6" placeholder="Example: Automated tools flag identity anomalies." oninput="updateMaturity('identity_q6')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q6"></div></div>
+            </div>
+            <div class="question">
+                <h3>7. How are identity workflows managed? (Automation & Orchestration)</h3>
+                <input type="text" id="identity_q7" placeholder="Example: Automated workflows streamline provisioning." oninput="updateMaturity('identity_q7')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q7"></div></div>
+            </div>
+            <div class="question">
+                <h3>8. How is compliance with identity policies tracked and enforced? (Governance)</h3>
+                <input type="text" id="identity_q8" placeholder="Example: Automated compliance monitoring ensures adherence." oninput="updateMaturity('identity_q8')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_identity_q8"></div></div>
+            </div>
+            <div class="section-nav">
+                <button onclick="navigate('previous', 'identities')" disabled>Previous</button>
+                <button onclick="navigate('next', 'identities')">Next</button>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Endpoint Section -->
+    <section >
+        <div class="container">
+
+            <div id="endpoint" class="section">
+
+            <h2>Zero Trust Device Maturity Assessment</h2>
+            <div class="question">
+                <h3>1. How are devices inventoried and tracked?</h3>
+                <input type="text" id="device_q1" placeholder="Example: Automated tools track all devices and status." oninput="updateMaturity('device_q1')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q1"></div></div>
+            </div>
+            <div class="question">
+                <h3>2. How are devices authenticated before accessing resources?</h3>
+                <input type="text" id="device_q2" placeholder="Example: Certificates and MFA verify device identity." oninput="updateMaturity('device_q2')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q2"></div></div>
+            </div>
+            <div class="question">
+                <h3>3. How are devices configured and kept compliant?</h3>
+                <input type="text" id="device_q3" placeholder="Example: MDM tools enforce standardized configurations." oninput="updateMaturity('device_q3')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q3"></div></div>
+            </div>
+            <div class="question">
+                <h3>4. How is endpoint security enforced and monitored?</h3>
+                <input type="text" id="device_q4" placeholder="Example: EDR tools detect and mitigate threats automatically." oninput="updateMaturity('device_q4')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q4"></div></div>
+            </div>
+            <div class="question">
+                <h3>5. How is network access controlled for devices?</h3>
+                <input type="text" id="device_q5" placeholder="Example: NAC verifies device security before access." oninput="updateMaturity('device_q5')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q5"></div></div>
+            </div>
+            <div class="question">
+                <h3>6. How are device updates managed?</h3>
+                <input type="text" id="device_q6" placeholder="Example: Automated updates ensure patches are applied." oninput="updateMaturity('device_q6')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q6"></div></div>
+            </div>
+            <div class="question">
+                <h3>7. How are devices securely decommissioned?</h3>
+                <input type="text" id="device_q7" placeholder="Example: Automated tools erase data before disposal." oninput="updateMaturity('device_q7')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q7"></div></div>
+            </div>
+            <div class="question">
+                <h3>8. How is telemetry data collected and analyzed for security insights?</h3>
+                <input type="text" id="device_q8" placeholder="Example: Automated tools analyze telemetry for anomalies." oninput="updateMaturity('device_q8')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q8"></div></div>
+            </div>
+            <div class="question">
+                <h3>9. How are governance policies enforced across devices?</h3>
+                <input type="text" id="device_q9" placeholder="Example: Automated compliance tools enforce policies." oninput="updateMaturity('device_q9')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q9"></div></div>
+            </div>
+            <div class="question">
+                <h3>10. How are device and identity security integrated?</h3>
+                <input type="text" id="device_q10" placeholder="Example: Device security integrates with identity management." oninput="updateMaturity('device_q10')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_device_q10"></div></div>
+            </div>
+            <div class="section-nav">
+                <button onclick="navigate('previous', 'endpoint')">Previous</button>
+                <button onclick="navigate('next', 'endpoint')">Next</button>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section>
+        <div class="container">
+
+            <div id="infrastructure" class="section">
+
+            <h2>Zero Trust Infrastructure Maturity Assessment</h2>
+            <div class="question">
+                <h3>1. How is segmentation implemented to control and secure network traffic?</h3>
+                <input type="text" id="infra_q1" placeholder="Example: VLANs and firewalls enforce segmentation." oninput="updateMaturity('infra_q1')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_infra_q1"></div></div>
+            </div>
+            <div class="question">
+                <h3>2. How are network logs collected, correlated, and analyzed?</h3>
+                <input type="text" id="infra_q2" placeholder="Example: Logs are analyzed in real-time for anomalies." oninput="updateMaturity('infra_q2')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_infra_q2"></div></div>
+            </div>
+            <div class="question">
+                <h3>3. How does your organization detect and respond to network threats?</h3>
+                <input type="text" id="infra_q3" placeholder="Example: Security tools mitigate threats automatically." oninput="updateMaturity('infra_q3')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_infra_q3"></div></div>
+            </div>
+            <div class="question">
+                <h3>4. How does your organization protect against intrusions, DDoS attacks, and encrypted threats?</h3>
+                <input type="text" id="infra_q4" placeholder="Example: Tools block intrusions and inspect traffic." oninput="updateMaturity('infra_q4')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_infra_q4"></div></div>
+            </div>
+            <div class="question">
+                <h3>5. How do you enforce access control across users and devices?</h3>
+                <input type="text" id="infra_q5" placeholder="Example: MFA and device trust policies enforce access." oninput="updateMaturity('infra_q5')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_infra_q5"></div></div>
+            </div>
+            <div class="question">
+                <h3>6. How does your organization handle real-time monitoring and automated security responses?</h3>
+                <input type="text" id="infra_q6" placeholder="Example: Automated tools block suspicious activity." oninput="updateMaturity('infra_q6')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_infra_q6"></div></div>
+            </div>
+            <div class="section-nav">
+                <button onclick="navigate('previous', 'infrastructure')">Previous</button>
+                <button onclick="navigate('next', 'infrastructure')">Next</button>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Data Section -->
+    <section>
+        <div class="container">
+
+            <div id="data" class="section">
+
+            <h2>Zero Trust Data Maturity Assessment</h2>
+            <div class="question">
+                <h3>1. How are data assets discovered and cataloged across environments?</h3>
+                <input type="text" id="data_q1" placeholder="Example: Automated tools track and classify data." oninput="updateMaturity('data_q1')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q1"></div></div>
+            </div>
+            <div class="question">
+                <h3>2. How is data classified based on sensitivity and business impact?</h3>
+                <input type="text" id="data_q2" placeholder="Example: AI tools classify data by sensitivity." oninput="updateMaturity('data_q2')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q2"></div></div>
+            </div>
+            <div class="question">
+                <h3>3. How does your organization ensure data availability in case of failure?</h3>
+                <input type="text" id="data_q3" placeholder="Example: Real-time replication ensures backups." oninput="updateMaturity('data_q3')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q3"></div></div>
+            </div>
+            <div class="question">
+                <h3>4. How is sensitive data protected from unauthorized access?</h3>
+                <input type="text" id="data_q4" placeholder="Example: All sensitive data is encrypted automatically." oninput="updateMaturity('data_q4')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q4"></div></div>
+            </div>
+            <div class="question">
+                <h3>5. How do you verify users before they access sensitive data?</h3>
+                <input type="text" id="data_q5" placeholder="Example: MFA is required for sensitive data access." oninput="updateMaturity('data_q5')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q5"></div></div>
+            </div>
+            <div class="question">
+                <h3>6. How do you enforce regulatory compliance and security policies?</h3>
+                <input type="text" id="data_q6" placeholder="Example: Automated tools enforce compliance policies." oninput="updateMaturity('data_q6')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q6"></div></div>
+            </div>
+            <div class="question">
+                <h3>7. How is data leakage prevented?</h3>
+                <input type="text" id="data_q7" placeholder="Example: DLP tools prevent unauthorized transfers." oninput="updateMaturity('data_q7')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_data_q7"></div></div>
+            </div>
+            <div class="section-nav">
+                <button onclick="navigate('previous', 'data')">Previous</button>
+                <button onclick="navigate('next', 'data')">Next</button>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section>
+        <div class="container">
+
+            <div id="apps" class="section">
+
+            <h2>Zero Trust Application Maturity Assessment</h2>
+            <div class="question">
+                <h3>1. How are secure coding practices enforced in your application development process?</h3>
+                <input type="text" id="app_q1" placeholder="Example: Automated tools scan for vulnerabilities in development." oninput="updateMaturity('app_q1')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_app_q1"></div></div>
+            </div>
+            <div class="question">
+                <h3>2. How are vulnerabilities in applications identified and mitigated?</h3>
+                <input type="text" id="app_q2" placeholder="Example: Automated SAST and DAST are integrated." oninput="updateMaturity('app_q2')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_app_q2"></div></div>
+            </div>
+            <div class="question">
+                <h3>3. How is user authentication enforced for accessing applications?</h3>
+                <input type="text" id="app_q3" placeholder="Example: MFA is required with risk-based authentication." oninput="updateMaturity('app_q3')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_app_q3"></div></div>
+            </div>
+            <div class="question">
+                <h3>4. How are APIs secured through an API gateway?</h3>
+                <input type="text" id="app_q4" placeholder="Example: API gateways enforce authentication and rate limiting." oninput="updateMaturity('app_q4')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_app_q4"></div></div>
+            </div>
+            <div class="question">
+                <h3>5. How are applications audited for compliance with regulatory requirements?</h3>
+                <input type="text" id="app_q5" placeholder="Example: Automated monitoring ensures regulatory compliance." oninput="updateMaturity('app_q5')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_app_q5"></div></div>
+            </div>
+            <div class="section-nav">
+                <button onclick="navigate('previous', 'apps')">Previous</button>
+                <button onclick="navigate('next', 'apps')">Next</button>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Network Section -->
+    <section>
+        <div class="container">
+
+            <div id="network" class="section">
+
+            <h2>Zero Trust Network Maturity Assessment</h2>
+            <div class="question">
+                <h3>1. How is network segmentation implemented to control access to critical infrastructure?</h3>
+                <input type="text" id="network_q1" placeholder="Example: Role-based microsegmentation restricts access." oninput="updateMaturity('network_q1')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q1"></div></div>
+            </div>
+            <div class="question">
+                <h3>2. How is secure remote access provided to infrastructure resources?</h3>
+                <input type="text" id="network_q2" placeholder="Example: ZTNA enforces user and device policies." oninput="updateMaturity('network_q2')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q2"></div></div>
+            </div>
+            <div class="question">
+                <h3>3. How is infrastructure resiliency ensured to maintain availability?</h3>
+                <input type="text" id="network_q3" placeholder="Example: Automated failover ensures high availability." oninput="updateMaturity('network_q3')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q3"></div></div>
+            </div>
+            <div class="question">
+                <h3>4. How is security managed across on-premises and cloud environments?</h3>
+                <input type="text" id="network_q4" placeholder="Example: Unified policies enforce security across hybrid environments." oninput="updateMaturity('network_q4')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q4"></div></div>
+            </div>
+            <div class="question">
+                <h3>5. How are threats and anomalies detected across the infrastructure?</h3>
+                <input type="text" id="network_q5" placeholder="Example: Automated tools provide real-time threat alerts." oninput="updateMaturity('network_q5')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q5"></div></div>
+            </div>
+            <div class="question">
+                <h3>6. How is visibility into infrastructure security ensured?</h3>
+                <input type="text" id="network_q6" placeholder="Example: Automated analytics provide real-time visibility." oninput="updateMaturity('network_q6')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q6"></div></div>
+            </div>
+            <div class="question">
+                <h3>7. How are infrastructure security operations automated?</h3>
+                <input type="text" id="network_q7" placeholder="Example: Automated orchestration improves response times." oninput="updateMaturity('network_q7')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q7"></div></div>
+            </div>
+            <div class="question">
+                <h3>8. How are security policies enforced and monitored for compliance?</h3>
+                <input type="text" id="network_q8" placeholder="Example: Automated tools enforce compliance continuously." oninput="updateMaturity('network_q8')">
+                <div class="maturity-bar"><div class="maturity-fill" id="maturity_network_q8"></div></div>
+            </div>
+            <div class="section-nav">
+                <button onclick="navigate('previous', 'network')">Previous</button>
+                <button onclick="navigate('next', 'network')" disabled>Next</button>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <div id="appreciation">Thank you for participating in the Zero Trust Maturity Assessment!</div>
+    <button id="calculate" onclick="calculateScores()">Calculate Maturity Scores</button>
+    <div id="result"></div>
+
+    <!-- Popup and Overlay -->
+    <div id="overlay" class="overlay"></div>
+    <div id="popup" class="popup">
+        <div class="sub-come-out">
+        <p>Please answer all questions before submitting</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+    </div>
+
+    <main></main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>Zero Trust 2025 © copyright</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/survay.js"></script>
+
+    <script>
+        let scrollTop = document.querySelector(".backto-top");
+
+window.addEventListener("scroll", () => {
+    scrollTop.classList.toggle("scroll-active", window.scrollY >= 400);
+}) 
+    </script>
+</body>
+</html>
